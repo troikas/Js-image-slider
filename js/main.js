@@ -1,3 +1,5 @@
+import data from './img.js';
+
 function _(e) {
   return document.getElementById(e);
 }

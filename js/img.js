@@ -20,3 +20,5 @@ let data = [
         name: 'Five Image',
       },
 ];
+
+export default data;
