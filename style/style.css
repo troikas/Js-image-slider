@@ -51,6 +51,7 @@ main
     height: calc(100vh - 9.5rem);
 
     border: 5px solid #eaf0f1;
+    border-radius: 25px;
 }
 
 #img-cont img
