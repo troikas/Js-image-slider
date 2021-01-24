@@ -19,16 +19,16 @@ _('prev').addEventListener('click', () => {
       } else {
         count -= 1;
       }
-      _('mainImg').setAttribute('src', data[count].path);
       _('mainImg').classList.toggle('transparent');
+      _('mainImg').setAttribute('src', data[count].path);
       _('imgTitle').innerText = data[count].name;
-    }, 200);
+    }, 300);
   });
 
 _('next').addEventListener('click', () => {
     let imgBefore = _('mainImg').src;
-    _('mainImg').classList.toggle('transparent');
     _('mainImg').setAttribute('src', imgBefore);
+    _('mainImg').classList.toggle('transparent');
     setTimeout (function() {
       if (count >= data.length - 1) {
         count = 0;
@@ -38,7 +38,7 @@ _('next').addEventListener('click', () => {
       _('mainImg').classList.toggle('transparent');
       _('mainImg').setAttribute('src', data[count].path);
       _('imgTitle').innerText = data[count].name;
-    }, 200);
+    }, 300);
   });
 
 

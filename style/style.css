@@ -61,9 +61,7 @@ main
     width: 100%;
     height: 100%;
 
-    transition: all .2s;
-
-    opacity: 1;
+    animation: opu .3s ease-in-out;
 
     aspect-ratio: 16 / 9;
 }
@@ -106,7 +104,38 @@ main
 
 #img-cont img.transparent
 {
-    opacity: 0;
+    animation: op .3s ease-in-out;
+}
+
+@keyframes op
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: .5;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+@keyframes opu
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: .5;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 
 footer
