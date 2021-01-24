@@ -56,10 +56,12 @@ main
 
 #img-cont img
 {
+    left: 0;
+
     width: 100%;
     height: 100%;
 
-    transition: all .3s ease-in-out;
+    transition: all .2s;
 
     opacity: 1;
 
@@ -100,6 +102,11 @@ main
 
     color: #ccc;
     text-shadow: 2px 2px 4px #000;
+}
+
+#img-cont img.transparent
+{
+    opacity: 0;
 }
 
 footer

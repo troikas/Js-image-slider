@@ -10,23 +10,35 @@ _('mainImg').setAttribute('src', data[count].path);
 _('imgTitle').innerText = data[count].name;
 
 _('prev').addEventListener('click', () => {
-    if (count === 0) {
-      count = data.length - 1;
-    } else {
-      count -= 1;
-    }
-    _('mainImg').setAttribute('src', data[count].path);
-    _('imgTitle').innerText = data[count].name;
+    let imgBefore = _('mainImg').src;
+    _('mainImg').setAttribute('src', imgBefore);
+    _('mainImg').classList.toggle('transparent');
+    setTimeout (function() {
+      if (count === 0) {
+        count = data.length - 1;
+      } else {
+        count -= 1;
+      }
+      _('mainImg').setAttribute('src', data[count].path);
+      _('mainImg').classList.toggle('transparent');
+      _('imgTitle').innerText = data[count].name;
+    }, 200);
   });
 
 _('next').addEventListener('click', () => {
-    if (count >= data.length - 1) {
-      count = 0;
-    } else {
-      count += 1;
-    }
-    _('mainImg').setAttribute('src', data[count].path);
-    _('imgTitle').innerText = data[count].name;
+    let imgBefore = _('mainImg').src;
+    _('mainImg').classList.toggle('transparent');
+    _('mainImg').setAttribute('src', imgBefore);
+    setTimeout (function() {
+      if (count >= data.length - 1) {
+        count = 0;
+      } else {
+        count += 1;
+      }
+      _('mainImg').classList.toggle('transparent');
+      _('mainImg').setAttribute('src', data[count].path);
+      _('imgTitle').innerText = data[count].name;
+    }, 200);
   });
 
 
