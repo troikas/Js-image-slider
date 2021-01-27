@@ -1,4 +1,4 @@
-# Js-image-slider-with-json
+# Js image slider
 
 Image slider with javascript.
 
